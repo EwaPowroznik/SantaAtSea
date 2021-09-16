@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sass/index.css" />
+    <title>Uwaga Kraken!</title>
+</head>
+<body>
+
+    <body>
+        <div class="main" id="main">
+            <!-- ikony funkcjonalności na głownym ekranie -->
+             <div class="main__solution">
+                <a href="form.html" class="onClick"></a>
+            </div>
+            <div class="main__introduction">
+                     <a href="#introduction" class="onClick">
+                        <input type="radio" class="introduction__interaction" name="open-envelope" id="open-envelope" >
+                        <label class="introduction__interaction-label" for="open-envelope"></label>
+                        <div class="main__introduction--open"> </div> 
+                     </a> 
+            </div>  
+            <div class="main__journal">
+                     <a href="#journal" class="onClick"></a>
+            </div>
+            <div class="main__bag">
+                     <a href="#bag" class="onClick"></a>
+            </div>
+            <div class="main__deadpirate">  
+                    <input type="radio" class="deadpirate__interaction" name="bubble" id="bubble" >
+                    <label class="deadpirate__interaction-label" for="bubble">
+                    </label>
+                    <div class="deadpirate__bubble">
+                        <div class="deadpirate__content">
+                            <p class="deadpirate__text">Szkielet jest zaczarowany i czasem odpowiada na wasze pytania. Zazwyczaj jednak odpowiada niezrozumiałym bełkotem. Możecie spytać go o radę, nie wiecie jednak czy powie wam coś przydatnego. Każda jego odpowiedź powoduje też kołysanie statku - nie wiecie czy kolejne pytanie nie spowoduje jakiejś katastrofy. </p>
+                        </div>
+                    </div>
+                    <a href="#log" class="onClick">
+                        <div class="deadpirate__log"></div>
+                    </a>
+            </div>
+
+            <!-- ogólny opis sytuacji -->
+        <div class="introduction" id="introduction">
+            <div class="introduction__content">
+                <div class="introduction__text">
+                    <p class="standard-paragraph">
+                        Wyjazd integracyjny na bogato. Wasz zespół wygrał ogólnofirmową nagrodę jaką jest rejs po Karaibach. Przed wami kilka dni na morzu, a potem słońce, plaża i zimne drinki.
+                    </p>
+                    <p class="standard-paragraph">
+                        Po przeszkoleniu o regułach obsługi waszego jachtu wypływacie w morze. Woda jest spokojna, nowoczesny jacht płynie zasadniczo sam. Nie pozostaje wam nic innego jak wieczorna impreza.
+                    </p>
+                    <p class="standard-paragraph">Budzicie się zmęczeni, niektórzy także mocno odczuwają skutki poprzedniej nocy. Pobudka jest jednak dość gwałtowna i nieprzyjemna - jedno z was zauważa, że wasz jacht nabiera wody! Po wybiegnięciu na pokład zauważacie, że zderzyliście się z innym statkiem. Nowy statek wygląda dziwacznie - trochę jakby został przeniesiony z muzeum. W odróżnieniu jednak od waszego jachtu wygląda na nieuszkodzonego zderzeniem, tymczasem wasz statek szybko nabiera wody i tonie.</p>
+                    <p class="standard-paragraph">
+                    Decydujecie się przejść na pokład drugiego statku aby się uratować. To żaglowiec - wygląda na bardzo stary, jakby został tu przeniesiony z XVII wieku. Ma nawet piracką banderę! Nikt z was jednak nie wie jak takim czymś żeglować i jeżeli nie chcecie umrzeć tu zanim jakiś inny statek was znajdzie trzeba znaleźć rozwiązanie.
+                    </p>
+                    <p class="standard-paragraph">
+                    Jednym z waszych pierwszych znalezisk jest dobrze zachowany szkielet przywiązany do krzesła koło koła sterowego. Z drugiej strony sterczy dziwaczna rura ginąca pod pokładem. Na rurze wisi tabliczka z napisem "Aby napoić krakena i skłonić go do ciągnięcia statku wlej tu miksturę"
+                    </p>
+                    <p class="standard-paragraph">
+                    Jakkolwiek dziwacznie by to nie brzmiało akceptujecie, że trafiliście na zaczarowany statek i postanawiacie obudzić krakena, aby pokierować statkiem i uratować się. Rozdzielacie się i przeszukujecie statek szukając przepisu na miksturę. Znaleziska gromadzicie obok koła sterowego.
+                    </p>
+                </div> 
+                <a href="#main" class="btn-close"></a>
+            </div>
+        </div>
+        <!-- dziennik gracza  -->
+        <div class="journal" id="journal">
+            <div class="journal__content">
+                <div class="book">
+                    <label for="page-1"  class="book__page book__page--1">
+                        <div class="page__content page__content--1">
+                            
+                            <div class="page__textbox">
+                               
+                                <!-- przyklejona notatka -->
+                               <div class="note">
+                                   <div class="tape-section"></div>
+                                   <p class="standard-paragraph--smaller">
+                                    Mikstura Pobudzająca - nie nadaje się do picia (chyba że jesteś na przykład Krakenem, wtedy tylko pić zmieszane z wodą !), wystarczy podstawić delikwentowi pod nos. Przechowywać w szklanych naczyniach, gotować w kociołkach ze stopu z dodatkiem unobtainium, adamantium lub orichalcum. 
+                                   </p>
+                                   <div class="tape-section"></div>
+                               </div>
+                               <!-- odręczna notatka -->
+                               <div class="handwrite">
+                                    <p class="handwrite-paragraf">
+                                        Jesteśmy spragnieni, głodni i zmęczeni. Musicie w kilka godzin (przed zachodem słońca) znaleźć rozwiązanie, inaczej opadniecie z sił a wasze szanse na przeżycie znacznie zmaleją.
+                                    </p>
+                               </div>
+                            </div>
+                        </div>
+                    </label>
+                   <label for="page-2" class="book__page book__page--4">
+                    <div class="page__content page__content--4">
+                        <!-- miejsce na content na 4 stronie -->
+                        <div class="page__textbox">
+                            <div class="handwrite">
+                                <p class="handwrite-paragraf">
+                                    Zastąpienie miodu podanego w oryginalnym przepisie innym miodem wymaga wzbogacenia miksury dodatkowymi składnikami. Np. zamiast miodu górskiego można użyć zwykłego miodu lipowego z dodatkiem czegoś halucynogennego, np. pejotlu.
+                                </p>
+                           </div>
+                            <div class="note">
+                                <div class="tape-section"></div>
+                                <p class="standard-paragraph--smaller">
+                                 Przepis na grog "kapitański" - rum, miód, sok z cytryny, dokładnie trzy pokrojone limonki 
+                                </p>
+                                <div class="tape-section"></div>
+                            </div>
+                        </div>
+                    </div>
+                   </label> 
+                   <!-- reset strony -->
+                   <input type="radio" name="page" id="page-1"/>  
+                   <!-- przejście do drugiej strony -->
+                   <input type="radio" name="page" id="page-2"/>
+                   <label class="book__page book__page--2">
+                     <div class="book__page-front">
+                       <div class="page__content page__content--2">
+                        <div class="page__textbox">
+                            <!-- miejsce na kontent na 2 stronie -->
+                            <div class="handwrite">
+                                <p class="handwrite-paragraf">
+                                    Zastąpienie miodu podanego w oryginalnym przepisie innym miodem wymaga wzbogacenia miksury dodatkowymi składnikami. Np. zamiast miodu górskiego można użyć zwykłego miodu lipowego z dodatkiem czegoś halucynogennego, np. pejotlu.
+                                </p>
+                           </div>
+                            <div class="note">
+                                <div class="tape-section"></div>
+                                <p class="standard-paragraph--smaller">
+                                 Przepis na grog "kapitański" - rum, miód, sok z cytryny, dokładnie trzy pokrojone limonki 
+                                </p>
+                                <div class="tape-section"></div>
+                            </div>
+                        </div>
+                       </div>
+                     </div>
+                     <div class="book__page-back">
+                       <div class="page__content page__content--3"> 
+                        <div class="page__textbox">
+                            <!-- miejsce na kontent na 3 stronie -->
+                            
+                            <div class="note">
+                                <div class="tape-section"></div>
+                                <p class="standard-paragraph--smaller">
+                                 Przepis na grog "kapitański" - rum, miód, sok z cytryny, dokładnie trzy pokrojone limonki 
+                                </p>
+                                <div class="tape-section"></div>
+                            </div>
+                            <div class="handwrite">
+                                <p class="handwrite-paragraf">
+                                    Zastąpienie miodu podanego w oryginalnym przepisie innym miodem wymaga wzbogacenia miksury dodatkowymi składnikami. Np. zamiast miodu górskiego można użyć zwykłego miodu lipowego z dodatkiem czegoś halucynogennego, np. pejotlu.
+                                </p>
+                           </div>
+                        </div>
+                       </div>
+                     </div>
+                     <button class="btn-arrow btn-arrow--right"></button>
+                   </label>
+                 </div>
+                <a href="#main" class="btn-close"></a>
+                <!-- miniaturowy plecak -->
+                <div class="small-bag">
+                    <div class="small-bag__icon"></div>
+                        <input type="checkbox"  class="small-bag__interaction" name="bag-items" id="bag-items" >
+                        <label class="small-bag__interaction-label" for="bag-items"></label>
+                    <div class="small-bag__content">
+                        <div class="small-bag__item">
+                            <img src="../img/ghee.png" alt="" class="small-bag__img">
+                            <span class="bag__tooltip--smaller">Masło ghee</span>
+                        </div>
+                        <div class="small-bag__item">
+                            <img src="../img/honey.png" alt="" class="small-bag__img">
+                            <span class="bag__tooltip--smaller">Miód</span>
+                        </div>
+                        <div class="small-bag__item">
+                            <img src="../img/moss.png" alt="" class="small-bag__img">
+                            <span class="bag__tooltip--smaller">Pęczek suszonego mchu irlandzkiego</span>
+                        </div>
+                        <div class="small-bag__item">
+                            <img src="../img/natron.png" alt="" class="small-bag__img">
+                            <span class="bag__tooltip--smaller">Pudło z kawałkami minerałów podpisane "Natron"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- główny plecak -->
+        <div class="bag" id="bag">
+            <div class="bag__content">
+                <div class="bag__container">
+                    <div class="bag__item bag__item--1">
+                        <img src="../img/ghee.png" alt="" class="bag__img">
+                        <span class="bag__tooltip">Masło ghee</span>
+                    </div>
+                    <div class="bag__item bag__item--2">
+                        <img src="../img/honey.png" alt="" class="bag__img">
+                        <span class="bag__tooltip">Miód</span>
+                    </div>
+                    <div class="bag__item bag__item--3">
+                        <img src="../img/moss.png" alt="" class="bag__img">
+                        <span class="bag__tooltip">Pęczek suszonego mchu irlandzkiego</span>
+                    </div>
+                    <div class="bag__item bag__item--4">
+                        <img src="../img/natron.png" alt="" class="bag__img">
+                        <span class="bag__tooltip">Pudło z kawałkami minerałów podpisane "Natron"</span>
+                    </div>   
+                </div>
+                <a href="#main" class="btn-close"></a>
+            </div>
+        </div>
+        <!-- log podpowiedzi -->
+        <div class="log" id="log">
+            <button class="btn-arrow btn-arrow--top"></button>
+            <button class="btn-arrow btn-arrow--bottom"></button>
+            <div class="log__content">
+                <div class="log__container">
+                    <div class="log__dialog log__dialog--ask" id="ask1">
+                        <div class="dialog__box dialog__box--right">
+                            <p class="dialog__text">Mamy problem z miksturą na kaca 
+                                <button class="btn-ask">
+                                    <div class="blob__container"><div class="blob"></div><div class="blob"></div><div class="blob"></div></div>
+                                    <span class="blob__tooltip">Poproś o podpowiedź</span>
+                                </button>
+                             </p> 
+                        </div>
+                    </div>
+                    <div class="log__dialog log__dialog--hint" id="hint1">
+                        <div class="dialog__box dialog__box--left">
+                            <p class="dialog__text">Byliśmy wykształconymi piratami! Czytajcie dokładnie notatki na statku, pewne dziwaczne nazwy pojawiają się w innych miejscach.</p>
+                        </div>
+                    </div>
+                    <div class="log__dialog log__dialog--ask1" id="ask2">
+                        <div class="dialog__box dialog__box--right">
+                            <p class="dialog__text">Kontynuuj
+                                <button class="btn-ask">
+                                    <div class="blob-container"><div class="blob"></div><div class="blob"></div><div class="blob"></div></div>
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="log__dialog log__dialog--hint" id="hint2">
+                        <div class="dialog__box dialog__box--left">
+                            <p class="dialog__text">Byliśmy wykształconymi piratami! Czytajcie dokładnie notatki na statku, pewne dziwaczne nazwy pojawiają się w innych miejscach.</p>
+                        </div>
+                    </div>
+                    <div class="log__dialog log__dialog--ask1" id="ask3">
+                        <div class="dialog__box dialog__box--right">
+                            <p class="dialog__text">Kontynuuj
+                                <button class="btn-ask">
+                                    <div class="blob-container"><div class="blob"></div><div class="blob"></div><div class="blob"></div></div>
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="log__dialog log__dialog--hint" id="hint3">
+                        <div class="dialog__box dialog__box--left">
+                            <p class="dialog__text">Byliśmy wykształconymi piratami! Czytajcie dokładnie notatki na statku, pewne dziwaczne nazwy pojawiają się w innych miejscach.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#main" class="btn-close"></a>
+            </div>
+        </div>
+    </body>
+</html>
