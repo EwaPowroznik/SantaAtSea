@@ -1,0 +1,51 @@
+
+
+@mixin flex-column{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flex-row{
+    display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+@mixin center-position{
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+@mixin popup-behavior{
+    width:100vw;
+    height:100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+   backdrop-filter: brightness(150%) blur(.5vmin);
+   opacity:0;
+   visibility: hidden;
+   transition: all .2s ease-in;
+   @include flex-column;
+}
+
+@mixin content-behavior{
+    margin: 0 auto;
+    transition: all .7s ease-out;
+    z-index:5;
+}
+@mixin target{
+    &:target {
+        opacity: 1;
+        visibility: visible;
+        z-index: 5;
+      }
+      &:target &__content{
+        transform: translateX(0) scale(1);
+    }
+}
+// @mixin img-behavior{
+
+// }

@@ -1,0 +1,106 @@
+.journal{
+    @include popup-behavior;
+    
+        &__content{
+          position:absolute;
+           width:60%;
+           height:85%;
+           top:2%;
+          @include content-behavior;
+          transform: translateY(30%) scale(.2);
+          background:url(../img/journal-popup.png)no-repeat center center/contain;
+        }
+        
+       @include target;
+
+       .book {
+         width: 110%;
+         height: 77%;
+         position:absolute;
+         top: 52%;
+         left:50%;
+         transform: translate(-50%,-50%);;
+         display: flex;
+        perspective: 1600px;
+          z-index:10;
+          // border:1px solid blue;
+         
+         &__page {
+           position: relative;
+           width: 50%;
+           height: 100%;
+           transform: rotateY(0deg);
+           transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
+           transform-origin: 0% 0%;
+          //  border:1px solid brown;
+           &--1,
+           &--4 {
+            cursor: pointer;
+           }
+           
+           &--2 {
+             position: absolute;
+             right: 0;
+             pointer-events: none;
+             transform-style: preserve-3d;
+           }
+           
+           &-front {
+             position: absolute;
+             width: 100%;
+             height: 100%;
+             transform: rotateY(0deg) translateZ(1px);
+           }
+           
+           &-back {
+             position: absolute;
+             width: 100%;
+             height: 100%;
+             transform: rotateY(180deg) translateZ(1px);
+           }
+           
+           .page__content {
+            position: absolute;
+            height: 100%;
+            width:75%;
+            // border:1px solid green;
+
+             &--1,
+             &--3{
+               right:0;
+               background:url(../../img/page-left.png)no-repeat center center/contain,;
+             }
+             &--2,
+             &--4{
+                left:0;
+               background:url(../../img/page-right.png)no-repeat center center/contain
+             } 
+           }
+           .page__textbox{
+              position: absolute;
+              width:95%;
+              height:92%;
+              top:5%;
+              left:2%;
+              padding:1vmin;
+              @include flex-column;
+              justify-content: space-around;
+              // border: 1px solid red;
+           }
+           
+         }
+         
+         input[type="radio"] {
+           display: none;
+           
+           &:checked + .book__page {
+             transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
+             transform: rotateY(-180deg);
+           }
+         }
+       }
+       
+       
+
+
+    }

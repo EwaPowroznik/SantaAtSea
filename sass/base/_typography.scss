@@ -1,0 +1,137 @@
+
+    @font-face{
+        font-family:"Kingthings Petrock light";
+        src:url(../fonts/KingthingsPetrocklight.ttf);
+    }
+    @font-face{
+        font-family:'Kingthings Petrock';
+        src:url(../fonts/KingthingsPetrock.ttf);
+    }
+    @font-face{
+        font-family:"OvertheRainbow" ;
+        src: url(../fonts/OvertheRainbow.ttf);}
+     @font-face{
+        font-family:"Caveat-Regular" ;
+        src: url(../fonts/caveat-regular.ttf);}
+
+    body{
+        font-family:'Kingthings Petrock';
+    }    
+                
+    
+    .standard-paragraph{
+        font-size: 2.3vmin;
+        line-height: 1.2;
+        padding-bottom: 1vmin;
+
+        &--smaller{
+            font-size:2vmin;
+            line-height: 1.4;
+        }
+    } 
+
+    .handwrite{
+        @include flex-column;
+        text-align: justify;
+        padding:.8vmin;
+        width:85%;
+        height:auto;
+        position:relative;
+        // background: linear-gradient(to bottom right, $color-paper-dark, 20%,$color-transparent)$color-paper;
+        // box-shadow: .2vmin .2vmin .4vmin $color-paper-dark;
+    }
+    .handwrite-paragraf{
+        font-family:"Caveat-Regular";
+        font-size:2.6vmin;
+        line-height: 1.3;
+        letter-spacing: .1vmin;
+        font-weight: 600;
+    }
+
+    .deadpirate__text{
+        font-family:"Caveat-Regular";
+        font-size:2vmin;
+        line-height: 1;
+        font-weight: 400;
+    }
+
+    .dialog__text{
+        font-size:2.4vmin;
+        line-height: 1.4;
+    }
+    .heading-primary{
+        font-size:4vmin;
+        letter-spacing: .2vmin;
+        color: $color-red;
+        text-shadow: .2vmin .2vmin .4vmin $color-paper-dark;
+        margin-bottom: .5vmin;
+    }
+    .heading-secondary{
+        text-shadow: .2vmin .2vmin .4vmin $color-paper-dark;
+        margin:.8vmin 0;
+    }
+    .form__label{
+        display:inline;
+        font-size:2.1vmin;
+        line-height: 1.4;
+        letter-spacing: .1vmin;
+
+    }
+    
+    
+    .bag__tooltip{
+    font-size: 2.2vmin;
+    line-height: 1.2;
+    visibility:hidden;
+    opacity:0;
+    display:inline-block;
+    width: 17vmin;
+    border-radius: .5vmin;
+    padding:.5vmin;
+    text-align: center;
+    color:$color-black;
+    background-color: $color-white;
+    position:absolute;
+    top:100%;
+    z-index: 10;
+    transition: al .5s ease-in-out;
+
+    &--smaller{
+        font-size: 1.8vmin;
+        line-height: 1.2;
+        visibility:hidden;
+        opacity:0;
+        display:inline-block;
+        width: 14vmin;
+        border-radius: .5vmin;
+        padding:.5vmin;
+        text-align: center;
+        color:$color-white;
+        background-color: $color-black;
+        position:absolute;
+        top:-15%;
+        z-index: 10;
+        transition: al .5s ease-in-out;
+    } 
+    }
+    .blob__tooltip{
+        font-family:'Kingthings Petrock';
+        font-size: 1.5vmin;
+        line-height: 1.2;
+        visibility:hidden;
+        opacity:0;
+        display:inline-block;
+        width: 12vmin;
+        border-radius: .5vmin;
+        padding:.5vmin;
+        text-align: center;
+        color:$color-red;
+        background-color: $color-white;
+        border:1px solid $color-red;
+        position:absolute;
+        top:0;
+        left:100%;
+        z-index: 10;
+        transition: al .5s ease-in-out;
+    }
+   

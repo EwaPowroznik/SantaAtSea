@@ -1,0 +1,154 @@
+.main__solution{
+    position:absolute;
+    width: 32vmin;
+    height:45vmin;
+    top:5%;
+    left: 45%;
+    background:url(../img/kraken-solution.png)no-repeat center/contain;
+    transition:all .4s ease-in-out;
+
+    &:hover{
+     filter: brightness(70%);
+     cursor: pointer;
+        } 
+
+}
+
+.main__introduction{
+    position:absolute;
+    width:44vmin;
+    height:30vmin;
+    top:65%;
+    left: 15%;
+    background:url(../img/introduction.png)no-repeat center/contain;
+    cursor: pointer;
+    transition:all .4s ease-in-out;
+
+    &--open{
+        background:url(../img/introduction-open.png)no-repeat center/contain;
+        position:absolute;
+        width:42vmin;
+        height:32vmin;
+        top:0;
+        left:0;
+        z-index:-1;
+        opacity:0;
+        visibility: hidden;
+        transition: all 1s;
+    }    
+
+    &:hover{
+        filter: brightness(70%);;      
+        }
+
+        .introduction__interaction{
+           display:none;
+            &-label{
+                display:inline-block;
+                position: absolute;
+                left:0;
+                top:0;
+                width:100%;
+                height:100%;
+                cursor: pointer;
+            }
+        }
+         .introduction__interaction:checked ~ .main__introduction--open{
+          visibility: visible;
+         opacity:1;
+         z-index: 1;
+         }
+}
+
+.main__journal{
+    position:absolute;
+    width:25vmin;
+    height:35vmin;
+    top:55%;
+    left:45%;
+    background: url(../img/journal.png)no-repeat center/contain;
+    transition:all .5s ease-in-out;
+
+    &:hover{
+        filter: brightness(70%);;
+    }
+
+}
+.main__bag{
+    position:absolute;
+    width:40vmin;
+    height:42vmin;
+    top:20%;
+    left: 10%;
+    background: url(../img/bag.png)no-repeat center/contain;
+    transition:all .5s ease-in-out;
+
+    &:hover{
+        filter: brightness(70%);
+    }
+
+}
+
+.main__deadpirate{
+    position:absolute;
+    width:70vmin;
+    height:75vmin;
+    top:3%;
+    right:2%;
+    background:url(../img/skelly.png)no-repeat center/contain;
+    transition: all .5s ease-in-out;
+
+    &:hover{
+        filter: brightness(120%);;
+    }
+
+    .deadpirate__bubble{
+        position: absolute; 
+        width:40vmin;
+        height:24vmin;
+        top:-2%;
+        left:-9%;
+        background: url(../img/deadpirate-dialog.png)no-repeat center/cover;
+        @include flex-column;
+        visibility: hidden;
+        opacity:0;
+        transition: all .4s ease-in-out;
+        // border:1px solid red;
+    }
+
+    .deadpirate__content{
+        width:85%;
+        height:80%;
+        position:Absolute;
+        @include center-position;
+        text-align: justify;
+        padding:2vmin 1.8vmin 1vmin .8vmin;
+        // border:1px solid blue;
+       
+    }
+    
+    .deadpirate__interaction{
+       display:none;
+        &-label{
+            display:inline-block;
+            position: absolute;
+            left:30%;
+            width:60%;
+            height:60%;
+        }
+    }
+    .deadpirate__interaction:checked ~ .deadpirate__bubble{
+     visibility: visible;
+     opacity:1;
+    }
+
+
+   .deadpirate__log{
+       position:Absolute;
+       width: 30vmin;
+       height:20vmin;
+       bottom:8%;
+        left:40%;
+   }
+}
+

@@ -1,0 +1,23 @@
+.introduction{
+    @include popup-behavior;
+   
+       &__content{
+          width:55%;
+          height:90%;
+           @include content-behavior;
+           transform: translateX(-40%) translateY(20%) scale(.2);
+          background:url(../img/introduction-popup.png)no-repeat center center/contain;
+       }
+       @include target;
+   
+       &__text{
+         position:absolute;
+         top:46%;
+         left:50%;
+         transform: translate(-50%,-50%);
+          width:65%;
+          height:80%;
+       }
+   
+   
+   }

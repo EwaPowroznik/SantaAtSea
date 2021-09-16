@@ -1,0 +1,76 @@
+.bag{
+    @include popup-behavior;
+    
+        &__content{
+           width:45%;
+           height:80%;
+           transform: translateX(-60%) translateY(-30%) scale(.2);
+            @include content-behavior;
+           background:url(../img/bag-popup.png)no-repeat center center/contain;
+           position:relative;
+           @include flex-column;
+        }
+        @include target;
+        // zachowanie samej przestrzeni na itemki
+        &__container{
+            width:80%;
+            height:80%;
+            padding:2vmin;
+            display:grid;
+        }
+
+        &__item{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            padding:.4vmin;
+            position:absolute;
+            transition: all .8s;
+    
+            &--1{
+                top:25%;
+                left:33%;
+            }
+            &--2{
+                top:52%;
+                left:28%;
+            }
+            &--3{
+                top:40%;
+                left:58%;
+            }
+            &--4{
+                top:72%;
+                left:45%;
+            }
+
+            &:hover .bag__tooltip{
+                visibility: visible;
+                opacity:1;
+            }
+    
+        }
+
+        
+        &:target .bag__item--1{
+            animation:wobbleLeft .7s .5s backwards ease-out ;
+        }
+        &:target .bag__item--2{
+            animation:wobbleLeft .7s 1s backwards ease-out ;
+        }
+        &:target .bag__item--3{
+            animation:wobbleLeft .7s 1.5s backwards ease-out ;
+        }
+        &:target .bag__item--4{
+            animation:wobbleLeft .7s 2s backwards ease-out ;
+        }
+    
+        &__img{
+           height:11vmin;
+           margin:auto;
+
+        }
+    
+     
+    }

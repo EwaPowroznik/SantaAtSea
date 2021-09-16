@@ -1,0 +1,81 @@
+.log{
+    @include popup-behavior;
+    
+        &__content{
+           width:65%;
+           height:90%;
+           transform: translateX(70%) scale(.2);
+           @include content-behavior;
+           background:url(../img/log-popup.png)no-repeat center center/contain;
+           position: relative
+        }
+    
+        @include target;
+    
+        &__container{
+            position:absolute;
+            position:relative;
+            top:5%;
+            left:10%;
+            width:80%;
+            height:90%;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            // hide scrollbar - mozilla i edge
+            -ms-overflow-style: none; 
+            scrollbar-width: none;
+        }
+        // hide scrollbar chrome i reszta
+        &__container::-webkit-scrollbar{
+            display:none;
+        }
+        &__dialog{
+            position:relative;
+            width:90%;
+            height:22%;
+            margin:1% 5%;
+    
+            &--ask{
+                background:url(../img/log-ask.png) no-repeat center left/20%,url(../img/dialog-left.png) no-repeat  center/40%;      
+            }
+            &--hint{
+                background:url(../img/hint.png)no-repeat top right/20%,url(../img/dialog-right.png)no-repeat  left/70%; 
+            }
+            &--ask1{
+            background:url(../img/log-ask.png) no-repeat center left/20%,url(../img/dialog-left.png) no-repeat  center/40%; 
+           }
+        }
+        &:target .log__dialog--ask{
+            animation:moveInLeft .8s .5s backwards ease-out;
+        }
+        &:target .log__dialog--hint{
+            animation:moveInRight .8s 1.5s backwards ease-out;
+        }
+        &:target .log__dialog--ask1{
+            animation:moveInLeft .8s 2.5s backwards ease-out;
+        }
+
+        .dialog__box{
+            position:Absolute;
+            height:16vmin;
+            padding:.5vmin 1.5vmin;
+            @include flex-column;
+  
+            &--right{
+                top:2%;
+                right:35%;
+                color:$color-red;
+                width:30vmin;
+            }
+            &--left{
+                top:2%;
+                left:5%;
+                width:54vmin;
+                
+            }
+  
+          }
+      
+           
+}
+       

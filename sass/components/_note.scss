@@ -1,0 +1,66 @@
+.note{
+    @include flex-column;
+    padding:.8vmin;
+    width:85%;
+    min-height: 10vmin;
+    position:relative;
+    background: linear-gradient(to bottom right, $color-paper-dark, 20%,$color-transparent)$color-paper;
+    box-shadow: .2vmin .2vmin .4vmin $color-paper-dark;
+
+    &::after{
+        content:"";
+        position:absolute;
+        width:100%;
+        height:100%;
+        background:linear-gradient($color-transparent, 50%, $color-paper-dark, 51%, $color-transparent),linear-gradient(to right, $color-transparent, 50%, $color-paper-dark,51%,$color-transparent);
+    }
+
+    .tape-section {
+        position: absolute;
+        width: 100%;
+      }
+      
+      .tape-section:first-of-type {
+        top: 0;
+      }
+      
+      .tape-section:last-of-type {
+        bottom: 0;
+      }
+      
+      .tape-section::before,
+      .tape-section::after {
+        content: "";
+        width: 4.5vmin;
+        height: 1.8vmin;
+        position: absolute;
+        background-color:$color-tape;
+        opacity: 0.5;
+        border-right: 1px dotted $color-tape-edge;
+        border-left: 1px dotted $color-tape-edge;
+      }
+      
+      .tape-section:last-of-type::after {
+        transform: rotate(-45deg);
+        right: $tape-position;
+        top: $tape-position;
+      }
+      
+      .tape-section:first-of-type::before {
+        transform: rotate(-45deg);
+        left:$tape-position;
+      }
+      
+      .tape-section:first-of-type::after {
+        transform: rotate(45deg);
+        right: $tape-position;
+        top: 0;
+      }
+      
+      .tape-section:last-of-type::before {
+        transform: rotate(45deg);
+        left:$tape-position;
+        bottom: 0;
+      }
+      
+}
