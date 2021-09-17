@@ -16,9 +16,8 @@
             width:80%;
             height:80%;
             padding:2vmin;
-            display:grid;
         }
-
+        // zachowanie każdego diva na item i jego absolutne położenie
         &__item{
             display:flex;
             flex-direction: column;
@@ -27,21 +26,24 @@
             padding:.4vmin;
             position:absolute;
             transition: all .8s;
+            background:url(../img/bag-elipse.png)no-repeat center center/contain;
+            width:20vmin;
+            height:20vmin;
     
             &--1{
-                top:25%;
-                left:33%;
+                top:20%;
+                left:29%;
             }
             &--2{
-                top:52%;
-                left:28%;
+                top:48%;
+                left:25%;
             }
             &--3{
-                top:40%;
-                left:58%;
+                top:35%;
+                left:54%;
             }
             &--4{
-                top:72%;
+                top:68%;
                 left:45%;
             }
 
@@ -65,9 +67,9 @@
         &:target .bag__item--4{
             animation:wobbleLeft .7s 2s backwards ease-out ;
         }
-    
+        // wielkość samego img
         &__img{
-           height:11vmin;
+           height:12vmin;
            margin:auto;
 
         }

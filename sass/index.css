@@ -493,8 +493,6 @@ body {
   width: 80%;
   height: 80%;
   padding: 2vmin;
-  display: -ms-grid;
-  display: grid;
 }
 
 .bag__item {
@@ -514,25 +512,28 @@ body {
   position: absolute;
   -webkit-transition: all .8s;
   transition: all .8s;
+  background: url(../img/bag-elipse.png) no-repeat center center/contain;
+  width: 20vmin;
+  height: 20vmin;
 }
 
 .bag__item--1 {
-  top: 25%;
-  left: 33%;
+  top: 20%;
+  left: 29%;
 }
 
 .bag__item--2 {
-  top: 52%;
-  left: 28%;
+  top: 48%;
+  left: 25%;
 }
 
 .bag__item--3 {
-  top: 40%;
-  left: 58%;
+  top: 35%;
+  left: 54%;
 }
 
 .bag__item--4 {
-  top: 72%;
+  top: 68%;
   left: 45%;
 }
 
@@ -562,7 +563,7 @@ body {
 }
 
 .bag__img {
-  height: 11vmin;
+  height: 12vmin;
   margin: auto;
 }
 
@@ -892,6 +893,17 @@ body {
   background: rgba(51, 27, 30, 0.2);
   -webkit-box-shadow: 0.8vmin 0.8vmin 0.6vmin rgba(189, 178, 162, 0.8);
           box-shadow: 0.8vmin 0.8vmin 0.6vmin rgba(189, 178, 162, 0.8);
+}
+
+.btn-reset {
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+  background: url(../../img/reset-button.png) no-repeat center center/contain;
+  width: 5vmin;
+  height: 5vmin;
+  border: none;
+  cursor: pointer;
 }
 
 .introduction {

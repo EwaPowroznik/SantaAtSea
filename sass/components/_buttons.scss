@@ -37,6 +37,7 @@
     }
 
 }
+// button-prośba o radę
 .btn-ask{
     position:absolute;
     width:6vmin;
@@ -55,7 +56,7 @@
     .blob__container{
         display:flex;
     }
-   
+//    wygląd każdej "kropki"
     .blob{
         display:inline-block;
         margin: .5vmin;
@@ -89,4 +90,14 @@
         box-shadow: .8vmin .8vmin .6vmin $color-paper-dark;
     }
 
+}
+.btn-reset{
+    position:absolute;
+    bottom:2%;
+    left:2%;
+    background: url(../../img/reset-button.png)no-repeat center center/contain;
+    width:5vmin;
+    height:5vmin;
+    border:none;
+    cursor: pointer; 
 }
