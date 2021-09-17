@@ -2,20 +2,49 @@
     @include popup-behavior;
    
        &__content{
-          width:55%;
-          height:90%;
+          width:50%;
+          height:85%;
            @include content-behavior;
            transform: translateX(-40%) translateY(20%) scale(.2);
           background:url(../img/introduction-popup.png)no-repeat center center/contain;
+          perspective: 110vmin;  
        }
        @include target;
+
+       &__pages{
+         position: relative;
+         left:7%;
+         width: 85%;
+         height: 100%;
+         transition: transform 0.8s;
+         transform-style: preserve-3d; 
+       }
+       .introduction__content:hover .introduction__pages {
+         transform: rotateY(180deg);
+       }
+
+       .page-front,
+       .page-back{
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         -webkit-backface-visibility: hidden; /* Safari */
+         backface-visibility: hidden;
+         background:url(../../img/introduction-page.png)no-repeat center center/contain;
+         transform:rotateZ(5deg);
+       }
+
+       .page-back{
+         transform: rotateY(180deg) rotateZ(5deg);
+       }
    
        &__text{
          position:absolute;
          top:46%;
          left:50%;
          transform: translate(-50%,-50%);
-         width:65%;
+         width:70%;
          height:80%;
+         @include flex-column;
        }
    }

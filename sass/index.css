@@ -283,9 +283,10 @@ body {
 }
 
 .standard-paragraph {
-  font-size: 2.3vmin;
+  font-family: "Kingthings Petrock light";
+  font-size: 2.8vmin;
   line-height: 1.2;
-  padding-bottom: 1vmin;
+  padding: 1vmin;
 }
 
 .standard-paragraph--smaller {
@@ -374,8 +375,8 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   top: 95%;
-  -webkit-transition: all .5s  ease-in;
-  transition: all .5s  ease-in;
+  -webkit-transition: all .4s  ease-in;
+  transition: all .4s  ease-in;
 }
 
 .bag__tooltip--smaller {
@@ -726,8 +727,8 @@ body {
 
 .small-bag .small-bag__interaction:checked ~ .small-bag__content {
   visibility: visible;
-  -webkit-animation: growRight 1.5s .1s backwards ease-in-out;
-          animation: growRight 1.5s .1s backwards ease-in-out;
+  -webkit-animation: growRight 1.2s  backwards ease-in-out;
+          animation: growRight 1.2s  backwards ease-in-out;
 }
 
 .note {
@@ -960,8 +961,8 @@ body {
 }
 
 .introduction__content {
-  width: 55%;
-  height: 90%;
+  width: 50%;
+  height: 85%;
   margin: 0 auto;
   -webkit-transition: all .7s ease-out;
   transition: all .7s ease-out;
@@ -969,6 +970,8 @@ body {
   -webkit-transform: translateX(-40%) translateY(20%) scale(0.2);
           transform: translateX(-40%) translateY(20%) scale(0.2);
   background: url(../img/introduction-popup.png) no-repeat center center/contain;
+  -webkit-perspective: 110vmin;
+          perspective: 110vmin;
 }
 
 .introduction:target {
@@ -982,14 +985,64 @@ body {
           transform: translateX(0) scale(1);
 }
 
+.introduction__pages {
+  position: relative;
+  left: 7%;
+  width: 85%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.introduction .introduction__content:hover .introduction__pages {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.introduction .page-front,
+.introduction .page-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+  background: url(../../img/introduction-page.png) no-repeat center center/contain;
+  -webkit-transform: rotateZ(5deg);
+          transform: rotateZ(5deg);
+}
+
+.introduction .page-back {
+  -webkit-transform: rotateY(180deg) rotateZ(5deg);
+          transform: rotateY(180deg) rotateZ(5deg);
+}
+
 .introduction__text {
   position: absolute;
   top: 46%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 65%;
+  width: 70%;
   height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .journal {
