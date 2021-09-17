@@ -1,0 +1,27 @@
+.loader{
+    @include popup-behavior;
+    visibility: visible;
+    opacity:1;
+
+    .loader__spinner{
+        color:$color-sea;
+        font-size: 30vmin;
+        overflow: hidden;
+        width: 30vmin;
+        height: 30vmin;
+        border-radius: 50%;
+        position: relative;
+        // transform: translateZ(0);
+        animation: load 2s infinite ease, round 2s infinite ease;
+       
+    }
+    .loader__img{
+        width:40%;
+        height:40%;
+        background:url(../img/loading.png)no-repeat center center/contain;
+        opacity:.5;
+        position:absolute;
+        border-radius: 50%;
+    }
+    
+}

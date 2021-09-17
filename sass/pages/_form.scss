@@ -8,12 +8,14 @@
     background:rgba($color-white,.8);
     border-radius: 5%;
     box-shadow: .2vmin .2vmin .4vmin $color-paper-dark;
+        
 }
 .form__group{
     display:flex;
     flex-direction: column;
     align-items:flex-start;
 }
+
 .input__team-name{
     font-family:'Caveat-Regular';
     font-size: 3vmin;
@@ -27,7 +29,5 @@
     width:50%;
     height:3vmin;
     box-shadow: 0vmin .5vmin .4vmin $color-paper-dark;
-
-
 
 }

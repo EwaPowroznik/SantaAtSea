@@ -3,7 +3,7 @@
     width: 32vmin;
     height:45vmin;
     top:5%;
-    left: 45%;
+    left: 40%;
     background:url(../img/kraken-solution.png)no-repeat center/contain;
     transition:all .4s ease-in-out;
 
@@ -104,25 +104,24 @@
 
     .deadpirate__bubble{
         position: absolute; 
-        width:40vmin;
-        height:24vmin;
-        top:-2%;
-        left:-9%;
+        width:52vmin;
+        height:28vmin;
+        top:-4%;
+        left: -25%;
         background: url(../img/deadpirate-dialog.png)no-repeat center/cover;
         @include flex-column;
         visibility: hidden;
         opacity:0;
         transition: all .4s ease-in-out;
-        // border:1px solid red;
     }
 
     .deadpirate__content{
-        width:85%;
-        height:80%;
+        width:82%;
+        height:82%;
         position:Absolute;
         @include center-position;
         text-align: justify;
-        padding:2vmin 1.8vmin 1vmin .8vmin;
+        padding:1vmin 1.8vmin 1vmin .5vmin;
         // border:1px solid blue;
        
     }
