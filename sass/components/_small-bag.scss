@@ -43,7 +43,6 @@
       margin:.5vmin;
       @include flex-column;
       background:url(../img/bag-elipse.png)no-repeat center center/contain;
-      // transition: all .3s 1s ease-in-out;
 
       &:hover .bag__tooltip--smaller{
         visibility: visible;

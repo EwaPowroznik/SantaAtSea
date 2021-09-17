@@ -7,6 +7,10 @@
     background:url(../img/kraken-solution.png)no-repeat center/contain;
     transition:all .4s ease-in-out;
 
+    &:hover .solution__tooltip{
+       @include visible;
+    } 
+
     &:hover{
      filter: brightness(70%);
      cursor: pointer;
@@ -53,9 +57,8 @@
             }
         }
          .introduction__interaction:checked ~ .main__introduction--open{
-          visibility: visible;
-         opacity:1;
-         z-index: 1;
+            @include visible;
+            z-index: 1;
          }
 }
 
@@ -136,8 +139,7 @@
         }
     }
     .deadpirate__interaction:checked ~ .deadpirate__bubble{
-     visibility: visible;
-     opacity:1;
+        @include visible;
     }
 
 

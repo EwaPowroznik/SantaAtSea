@@ -80,28 +80,28 @@
     
     
     .bag__tooltip{
-    font-size: 2.2vmin;
-    line-height: 1.2;
-    visibility:hidden;
-    opacity:0;
-    display:inline-block;
-    width: 17vmin;
-    border-radius: .5vmin;
-    padding:.5vmin;
-    text-align: center;
-    color:$color-black;
-    background-color: $color-white;
-    position:absolute;
-    top:100%;
-    z-index: 10;
-    transition: al .5s ease-in-out;
+        font-size: 2.2vmin;
+        line-height: 1.2;
+        visibility:hidden;
+        opacity:0;
+        width: 17vmin;
+        border-radius: .5vmin;
+        padding:.5vmin;
+        text-align: center;
+        color:$color-black;
+        background-color: $color-white;
+        border:1px solid $color-black;
+        position:absolute;
+        z-index: 10;
+        @include center-position;
+        top:95%;
+        transition: all .5s  ease-in;
 
     &--smaller{
         font-size: 1.8vmin;
         line-height: 1.2;
         visibility:hidden;
         opacity:0;
-        display:inline-block;
         width: 14vmin;
         border-radius: .5vmin;
         padding:.5vmin;
@@ -109,9 +109,9 @@
         color:$color-white;
         background-color: $color-black;
         position:absolute;
-        top:-15%;
         z-index: 10;
-        transition: al .5s ease-in-out;
+        top:-15%;
+        transition: all .2s  ease-in;
     } 
     }
     .blob__tooltip{
@@ -133,5 +133,24 @@
         left:100%;
         z-index: 10;
         transition: al .5s ease-in-out;
+    }
+    .solution__tooltip{
+        font-size: 2.2vmin;
+        line-height: 1.2;
+        visibility:hidden;
+        opacity:0;
+        width: 25vmin;
+        border-radius: .8vmin;
+        padding:.5vmin;
+        text-align: center;
+        color:$color-red;
+        background-color: $color-transparent;
+        border:1px solid $color-red;
+        position:absolute;
+        @include center-position;
+        top:2%;
+        transition: all 1s  ease-in;
+
+        
     }
    

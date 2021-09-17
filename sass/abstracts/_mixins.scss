@@ -46,3 +46,7 @@
         transform: translateX(0) scale(1);
     }
 }
+@mixin visible{
+    opacity:1;
+    visibility:visible;
+}

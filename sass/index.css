@@ -360,18 +360,22 @@ body {
   line-height: 1.2;
   visibility: hidden;
   opacity: 0;
-  display: inline-block;
   width: 17vmin;
   border-radius: .5vmin;
   padding: .5vmin;
   text-align: center;
   color: black;
   background-color: white;
+  border: 1px solid black;
   position: absolute;
-  top: 100%;
   z-index: 10;
-  -webkit-transition: al .5s ease-in-out;
-  transition: al .5s ease-in-out;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 95%;
+  -webkit-transition: all .5s  ease-in;
+  transition: all .5s  ease-in;
 }
 
 .bag__tooltip--smaller {
@@ -379,7 +383,6 @@ body {
   line-height: 1.2;
   visibility: hidden;
   opacity: 0;
-  display: inline-block;
   width: 14vmin;
   border-radius: .5vmin;
   padding: .5vmin;
@@ -387,10 +390,10 @@ body {
   color: white;
   background-color: black;
   position: absolute;
-  top: -15%;
   z-index: 10;
-  -webkit-transition: al .5s ease-in-out;
-  transition: al .5s ease-in-out;
+  top: -15%;
+  -webkit-transition: all .2s  ease-in;
+  transition: all .2s  ease-in;
 }
 
 .blob__tooltip {
@@ -413,6 +416,28 @@ body {
   z-index: 10;
   -webkit-transition: al .5s ease-in-out;
   transition: al .5s ease-in-out;
+}
+
+.solution__tooltip {
+  font-size: 2.2vmin;
+  line-height: 1.2;
+  visibility: hidden;
+  opacity: 0;
+  width: 25vmin;
+  border-radius: .8vmin;
+  padding: .5vmin;
+  text-align: center;
+  color: #aa1e1e;
+  background-color: rgba(51, 27, 30, 0);
+  border: 1px solid #aa1e1e;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 2%;
+  -webkit-transition: all 1s  ease-in;
+  transition: all 1s  ease-in;
 }
 
 .onClick {
@@ -538,8 +563,8 @@ body {
 }
 
 .bag__item:hover .bag__tooltip {
-  visibility: visible;
   opacity: 1;
+  visibility: visible;
 }
 
 .bag:target .bag__item--1 {
@@ -1209,15 +1234,15 @@ body {
 }
 
 .log__dialog--ask {
-  background: url(../img/log-ask.png) no-repeat center left/20%, url(../img/dialog-left.png) no-repeat center/40%;
+  background: url(../img/log-ask.png) no-repeat center left/20%, url(../img/dialog-left.png) no-repeat center/50%;
 }
 
 .log__dialog--hint {
-  background: url(../img/log-hint.png) no-repeat top right/20%, url(../img/dialog-right.png) no-repeat left/70%;
+  background: url(../img/log-hint.png) no-repeat top right/20%, url(../img/dialog-right.png) no-repeat left/75%;
 }
 
 .log__dialog--ask1 {
-  background: url(../img/log-ask.png) no-repeat center left/20%, url(../img/dialog-left.png) no-repeat center/40%;
+  background: url(../img/log-ask.png) no-repeat center left/20%, url(../img/dialog-left.png) no-repeat center/50%;
 }
 
 .log:target .log__dialog--ask {
@@ -1257,15 +1282,15 @@ body {
 
 .log .dialog__box--right {
   top: 2%;
-  right: 35%;
+  right: 33%;
   color: #aa1e1e;
   width: 30vmin;
 }
 
 .log .dialog__box--left {
   top: 2%;
-  left: 5%;
-  width: 54vmin;
+  left: 6%;
+  width: 52vmin;
 }
 
 .main__solution {
@@ -1277,6 +1302,11 @@ body {
   background: url(../img/kraken-solution.png) no-repeat center/contain;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
+}
+
+.main__solution:hover .solution__tooltip {
+  opacity: 1;
+  visibility: visible;
 }
 
 .main__solution:hover {
@@ -1331,8 +1361,8 @@ body {
 }
 
 .main__introduction .introduction__interaction:checked ~ .main__introduction--open {
-  visibility: visible;
   opacity: 1;
+  visibility: visible;
   z-index: 1;
 }
 
@@ -1436,8 +1466,8 @@ body {
 }
 
 .main__deadpirate .deadpirate__interaction:checked ~ .deadpirate__bubble {
-  visibility: visible;
   opacity: 1;
+  visibility: visible;
 }
 
 .main__deadpirate .deadpirate__log {

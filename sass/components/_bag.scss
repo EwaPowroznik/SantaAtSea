@@ -48,8 +48,7 @@
             }
 
             &:hover .bag__tooltip{
-                visibility: visible;
-                opacity:1;
+                @include visible;
             }
     
         }
@@ -71,8 +70,5 @@
         &__img{
            height:12vmin;
            margin:auto;
-
-        }
-    
-     
+        }   
     }

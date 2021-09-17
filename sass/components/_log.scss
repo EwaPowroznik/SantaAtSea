@@ -36,13 +36,13 @@
             margin:1% 5%;
     
             &--ask{
-                background:url(../img/log-ask.png) no-repeat center left/20%,url(../img/dialog-left.png) no-repeat  center/40%;      
+                background:url(../img/log-ask.png) no-repeat center left/20%,url(../img/dialog-left.png) no-repeat  center/50%;      
             }
             &--hint{
-                background:url(../img/log-hint.png)no-repeat top right/20%,url(../img/dialog-right.png)no-repeat  left/70%; 
+                background:url(../img/log-hint.png)no-repeat top right/20%,url(../img/dialog-right.png)no-repeat  left/75%; 
             }
             &--ask1{
-            background:url(../img/log-ask.png) no-repeat center left/20%,url(../img/dialog-left.png) no-repeat  center/40%; 
+            background:url(../img/log-ask.png) no-repeat center left/20%,url(../img/dialog-left.png) no-repeat  center/50%; 
            }
         }
         &:target .log__dialog--ask{
@@ -63,19 +63,15 @@
   
             &--right{
                 top:2%;
-                right:35%;
+                right:33%;
                 color:$color-red;
                 width:30vmin;
             }
             &--left{
                 top:2%;
-                left:5%;
-                width:54vmin;
-                
+                left:6%;
+                width:52vmin;  
             }
-  
-          }
-      
-           
+          }    
 }
        

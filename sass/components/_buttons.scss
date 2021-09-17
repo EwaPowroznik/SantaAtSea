@@ -49,8 +49,7 @@
     margin:1vmin;
     
     &:hover .blob__tooltip{
-        opacity:1;
-        visibility:visible;
+        @include visible;
     }
     
     .blob__container{
